@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/webhooks.ts": {
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/webhooks/:id/:token",
+      "destination": "/api/webhooks"
+    }
+  ]
+}
