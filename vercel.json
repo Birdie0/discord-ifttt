@@ -9,5 +9,8 @@
       "source": "/api/webhooks/:id/:token",
       "destination": "/api/webhooks"
     }
-  ]
+  ],
+  "github": {
+    "silent": true
+  }
 }
