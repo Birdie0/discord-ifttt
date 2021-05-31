@@ -14,8 +14,11 @@
   <details>
     <summary>How?</summary>
     <p>
-      Replace <code>discord.com</code> with <code>[project-name].vercel.app</code> (copy it from address bar) in webhook url field and you're ready to go.
+      Replace <code>discord.com</code> with <code id="hostname">[project-name].vercel.app</code> (copy it from address bar) in webhook url field and you're ready to go.
     </p>
   </details>
+  <script>
+    document.getElementById('hostname').textContent = window.location.hostname;
+  </script>
 </body>
 </html>
