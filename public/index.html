@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>discord-ifttt</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+  <h1>discord-ifttt</h1>
+
+  <details open>
+    <summary>Attention!!! Service has been shut down!!!</summary>
+    <p>
+      I hit Usage Limit on Vercel and since I don't want my account to be blocked I've decided to shut the service and release the code so everyone could host it by themselves.<br>
+      I'm really sorry for that, but there's no other available options for me.<br>
+      If you gonna self-host the instance, feel free to share link to it with friends, so they don't have to re-host it.<br>
+      Don't worry about hitting the limit, you have to receive really big load of requests to hit it, like it was in my case.<br><br>
+
+      <a href="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FBirdie0%2Fdiscord-ifttt&project-name=discord-ifttt&repository-name=discord-ifttt-selfhosted"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a><br><br>
+
+      Selfhostable version of the service can be found <a href="https://github.com/Birdie0/discord-ifttt">here</a>!<br><br>
+
+      Thanks everyone for using the service, till the next time 👋
+    </p>
+  </details>
+
+  <details open>
+    <summary>How to self-host?</summary>
+    <p>
+      <ol>
+        <li>Create GitHub/GitLab/Bitbucket account if you don't have one.</li>
+        <li><a href="https://vercel.com/signup" target="_blank" rel="noopener noreferrer">Login</a> on Vercel with it.</li>
+        <li>Go <a href="https://vercel.com/new/clone-flow?s=https%3A%2F%2Fgithub.com%2FBirdie0%2Fdiscord-ifttt" target="_blank" rel="noopener noreferrer">there</a></li>
+        <li>Under <strong>Create Git Repository</strong> choose same service as on step 1</li>
+        <li>Enter repository name, it will become <code>https://[repo-name].vercel.app/</code> after the deploy</li>
+        <li>Click Create, when it finish you will be redirected.</li>
+        <li>Done!</li>
+      </ol>
+    </p>
+  </details>
+
+  <details>
+    <summary>What? Why?</summary>
+    <p>
+      Currently some requests sent from IFTTT to Discord fail because because <code>too many requests to this host</code>.
+      As workaround I made mirror/bridge which will run requests through itself, additionally provide new features, handle ratelimits.
+    </p>
+    <p>
+      Here are some notable improvements:
+      <ul>
+        <li>
+          <code>application/json</code>
+          <ul>
+            <li>invalid JSON won't be sent to Discord</li>
+          </ul>
+        </li>
+        <li>
+          <code>text/plain</code>
+          <ul>
+            <li>allows to use current header with Discord Webhooks, body content will be message "content"</li>
+            <li>only first 2k characters will be in body, to prevent it from breakage due to body being too big</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+  </details>
+
+  <details>
+    <summary>How?</summary>
+    <p>
+      Replace <code>discord.com</code> with <code>discord-ifttt.vercel.app</code> in webhook url and you're ready to go.
+    </p>
+  </details>
+
+  <details>
+    <summary>Changelog</summary>
+    <ul>
+      <li>
+        28.05.21
+        <ul>
+          <li>service has been deprecated! please, self-host it using link above.</li>
+        </ul>
+      </li>
+      <li>
+        18.04.21
+        <ul>
+          <li>added little ratelimit handling, should decrease number of requests that got 429</li>
+        </ul>
+      </li>
+      <li>
+        27.02.21
+        <ul>
+          <li>function rewritten from Ruby into TypeScript</li>
+        </ul>
+      </li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Who?</summary>
+    <p>
+      Hi, I'm Birdie and I made this :) There's some other stuff I created:
+      <ul>
+        <li>
+          <a href="https://avatar.glue-bot.xyz/" target="_blank" rel="noopener noreferrer">Avatar Resolver</a>
+          - use with IFTTT applets when there's no ingredient for that
+        </li>
+        <li>
+          <a href="https://birdie0.github.io/discord-webhooks-guide/" target="_blank" rel="noopener noreferrer">Discord Webhooks Guide</a>
+        </li>
+        <li>
+          <a href="https://glue-bot.xyz/" target="_blank" rel="noopener noreferrer">Glue-bot</a>
+          - my Discord bot
+        </li>
+      </ul>
+    </p>
+  </details>
+</body>
+</html>

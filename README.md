@@ -1,0 +1,3 @@
+# discord-ifttt
+
+This branch includes notice about public instance being shut down and how to host own one, nothing else...
