@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.3"
+    "axios": "^0.24.0"
   },
   "devDependencies": {
     "@vercel/node": "^1.12.1"
