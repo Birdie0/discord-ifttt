@@ -9,8 +9,10 @@ export default async (request: VercelRequest, response: VercelResponse) => {
     return
   }
 
-  const { id, token } = request.query
-  const url = `https://discord.com/api/webhooks/${id}/${token}?wait=true`
+  const { id, token, thread_id } = request.query
+  const params: Record<string, string> = {wait: 'true'}
+  if (thread_id) params.thread_id = `${thread_id}`
+  const url = new URL(`https://discord.com/api/webhooks/${id}/${token}?${new URLSearchParams(params)}`).toString()
 
   const contentType = request.headers['content-type'].split(';')[0]
 
