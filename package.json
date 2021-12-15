@@ -1,11 +1,11 @@
 {
-  "name": "discord-ifttt",
-  "version": "1.0.0",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^0.24.0"
-  },
-  "devDependencies": {
-    "@vercel/node": "^1.12.1"
-  }
+	"name": "discord-ifttt",
+	"version": "1.0.0",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.24.0"
+	},
+	"devDependencies": {
+		"@vercel/node": "^1.12.1"
+	}
 }

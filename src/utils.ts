@@ -1,26 +1,30 @@
-import { VercelResponse } from '@vercel/node'
+import {VercelResponse} from '@vercel/node'
+import {AxiosError} from 'axios'
 
-const storage: { [key: string]: [number, number] } = {}
+const storage: Record<string, [number, number]> = {}
 
-function unixMs (): number {
-  return +new Date()
+function unixMs(): number {
+	return Date.now()
 }
 
-function sleep (ms: number): any {
-  return new Promise((resolve: any) => setTimeout(resolve, ms))
+function sleep(ms: number): Promise<unknown> {
+	return new Promise((resolve: any) => setTimeout(resolve, ms))
 }
 
-function dynamicSleep (str: string): any {
-  if (!storage[str] || unixMs() - storage[str][0] > 2500) storage[str] = [unixMs(), 0]
-  return sleep(400 * storage[str][1]++) // 2000 / 5 = 400ms
+function dynamicSleep(name: string): Promise<unknown> {
+	if (!storage[name] || unixMs() - storage[name][0] > 2500) {
+		storage[name] = [unixMs(), 0]
+	}
+
+	return sleep(400 * storage[name][1]++) // 2000 / 5 = 400ms
 }
 
-function handleError (err: any, response: VercelResponse): void {
-  if (err.response) {
-    response.status(err.response.status).send(err.response.data)
-  } else {
-    response.status(400).send({ error: err.message })
-  }
+function handleError(error: AxiosError, response: VercelResponse): void {
+	if (error.response) {
+		response.status(error.response.status).send(error.response.data)
+	} else {
+		response.status(400).send({error: error.message})
+	}
 }
 
-export { dynamicSleep, handleError }
+export {dynamicSleep, handleError}
