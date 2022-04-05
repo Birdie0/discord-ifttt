@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: discord-ifttt.vercel.app
-Token: 72e25aff634790847f99d38aeafbac555f663a17fe619771e3e33d9aa1f59d9b
