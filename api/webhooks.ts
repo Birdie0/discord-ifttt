@@ -1,16 +1,20 @@
-import {VercelRequest, VercelResponse} from '@vercel/node'
+import type {VercelRequest, VercelResponse} from '@vercel/node'
 import axios from 'axios'
 
 import {dynamicSleep, handleError} from '../src/utils'
 
 export default async (request: VercelRequest, response: VercelResponse) => {
 	if (request.method !== 'POST') {
-		response.status(405).send('nope')
+		response.status(405).send('this route supports POST only!')
 		return
 	}
 
-	const {id, token, thread_id} = request.query
-	const parameters = new URLSearchParams({wait: 'true'})
+	const {id, token, wait, thread_id} = request.query
+	const parameters = new URLSearchParams()
+	if (wait) {
+		parameters.append('wait', `${wait}`)
+	}
+
 	if (thread_id) {
 		parameters.append('thread_id', `${thread_id}`)
 	}
