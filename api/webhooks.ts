@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import {dynamicSleep, handleError} from '../src/utils'
 
-export default async (request: VercelRequest, response: VercelResponse) => {
+const webhooks = async (request: VercelRequest, response: VercelResponse) => {
 	if (request.method !== 'POST') {
 		response.status(405).send('this route supports POST only!')
 		return
@@ -12,16 +12,16 @@ export default async (request: VercelRequest, response: VercelResponse) => {
 	const {id, token, wait, thread_id} = request.query
 	const parameters = new URLSearchParams()
 	if (wait) {
-		parameters.append('wait', `${wait}`)
+		parameters.append('wait', String(wait))
 	}
 
 	if (thread_id) {
-		parameters.append('thread_id', `${thread_id}`)
+		parameters.append('thread_id', String(thread_id))
 	}
 
 	const url = new URL(`https://discord.com/api/webhooks/${id}/${token}?${parameters}`).toString()
 
-	const contentType = request.headers['content-type'].split(';')[0]
+	const contentType = request.headers['content-type']!.split(';')[0]
 
 	switch (contentType) {
 		case 'application/json': {
@@ -38,7 +38,7 @@ export default async (request: VercelRequest, response: VercelResponse) => {
 					.catch(error => {
 						handleError(error, response)
 					})
-			} catch (error) {
+			} catch (error: any) {
 				response
 					.status(400)
 					.send({error: error.message})
@@ -73,3 +73,5 @@ export default async (request: VercelRequest, response: VercelResponse) => {
 		}
 	}
 }
+
+export default webhooks

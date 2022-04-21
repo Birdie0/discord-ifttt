@@ -1,0 +1,15 @@
+{
+	"semicolon": false,
+	"rules": {
+		"@typescript-eslint/naming-convention": "off",
+		"@typescript-eslint/no-implicit-any-catch": "off",
+		"@typescript-eslint/no-unsafe-assignment": "off",
+		"@typescript-eslint/no-unsafe-call": "off",
+		"@typescript-eslint/no-unsafe-return": "off",
+		"@typescript-eslint/restrict-template-expressions": "off",
+		"capitalized-comments": "off",
+		"import/extensions": "off",
+		"unicorn/prefer-node-protocol": "off",
+		"unicorn/prevent-abbreviations": "off"
+	}
+}
