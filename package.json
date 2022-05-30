@@ -12,7 +12,10 @@
 		"axios": ">=0.26.0 <1.0.0"
 	},
 	"devDependencies": {
-		"@tsconfig/node14": "^1.0.1",
+		"@tsconfig/node16": "^1.0.2",
 		"@vercel/node": "^1.12.1"
+	},
+	"engines": {
+		"node": "16.x"
 	}
 }

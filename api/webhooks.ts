@@ -26,7 +26,7 @@ const webhooks = async (request: VercelRequest, response: VercelResponse) => {
 	switch (contentType) {
 		case 'application/json': {
 			try {
-				const body: Record<string, unknown> = request.body
+				const {body} = request
 
 				await dynamicSleep(`${id}-${token}`)
 

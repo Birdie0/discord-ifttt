@@ -9,7 +9,6 @@
 		"@typescript-eslint/restrict-template-expressions": "off",
 		"capitalized-comments": "off",
 		"import/extensions": "off",
-		"unicorn/prefer-node-protocol": "off",
 		"unicorn/prevent-abbreviations": "off"
 	}
 }

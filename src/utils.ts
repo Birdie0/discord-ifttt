@@ -1,3 +1,5 @@
+import {setTimeout as sleep} from 'node:timers/promises'
+
 import type {VercelResponse} from '@vercel/node'
 import type {AxiosError} from 'axios'
 
@@ -5,12 +7,6 @@ const storage = new Map<string, [number, number]>()
 
 function unixMs(): number {
 	return Date.now()
-}
-
-async function sleep(ms: number): Promise<void> {
-	await new Promise((resolve: any) => {
-		setTimeout(resolve, ms)
-	})
 }
 
 async function dynamicSleep(name: string): Promise<void> {
