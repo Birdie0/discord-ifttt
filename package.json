@@ -9,7 +9,7 @@
 		"lint:check": "tsc --noEmit"
 	},
 	"dependencies": {
-		"axios": ">=0.27.2 <1.0.0"
+		"axios": "^0.27.2"
 	},
 	"devDependencies": {
 		"@tsconfig/node16": "^1.0.3",
