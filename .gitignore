@@ -1,1 +1,8 @@
+# Logs
+.pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Vercel
 .vercel
