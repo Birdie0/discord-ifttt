@@ -2,15 +2,15 @@ lockfileVersion: 5.4
 
 specifiers:
   '@tsconfig/node18': ^1.0.1
-  '@vercel/node': ^2.8.11
-  axios: ^1.2.2
+  '@vercel/node': ^2.9.3
+  axios: ^1.3.3
 
 dependencies:
-  axios: 1.2.2
+  axios: 1.3.3
 
 devDependencies:
   '@tsconfig/node18': 1.0.1
-  '@vercel/node': 2.8.11
+  '@vercel/node': 2.9.3
 
 packages:
 
@@ -109,22 +109,22 @@ packages:
     resolution: {integrity: sha512-qelS/Ra6sacc4loe/3MSjXNL1dNQ/GjxNHVzuChwMfmk7HuycRLVQN2qNY3XahK+fZc5E2szqQSKUyAF0E+2bg==}
     dev: true
 
-  /@vercel/build-utils/5.8.3:
-    resolution: {integrity: sha512-t9IdZjTh65NnYvVMQfGIVXaYSBkSxuBSJHdrwy8FbSD0WB0OiRLg3sXJpKIl36M5E7IRsx29qgiw3qXEhoObtg==}
+  /@vercel/build-utils/6.2.2:
+    resolution: {integrity: sha512-xpexr6GQ8NPo1NHrA1VBpVEapmM+vfkViVtGRjvSYMVrIXZumSCYg8ZJiixn43RwNnGUnPPMD33FZXuGiQXU6g==}
     dev: true
 
-  /@vercel/node-bridge/3.1.8:
-    resolution: {integrity: sha512-zF4lUQLq2uqCUl1vm9KITK/rOVPeCCuSle5skqVi4ybQDaXaHpumBT7NovuOD5ls4AJxqVcyiOOheRT4f/le3A==}
+  /@vercel/node-bridge/3.1.11:
+    resolution: {integrity: sha512-LGbj+kPGgRnIlKo3949z01mLbHVi4BnRE7V5R6+J4E3f7xpQ12I9Wek10V7ivLB+LyS1+ATdjasdXAF4HOhqQw==}
     dev: true
 
-  /@vercel/node/2.8.11:
-    resolution: {integrity: sha512-XYkyNe+C+FIDc2TnlZxyS7cc0PbwGvuK3AFU75KaB898UUnOueEki2i0s8dokG1M9T3dT2QnbozyZ0anxT8jlQ==}
+  /@vercel/node/2.9.3:
+    resolution: {integrity: sha512-BexOx3i1ZM3wizWgS/hlqWxA5+S79ZLfvgnsT6MKv7s9okYsSDpi4w5hMpv8/TTvrxGA6VlbquuHo5irm6NJcQ==}
     dependencies:
       '@edge-runtime/vm': 2.0.0
       '@types/node': 14.18.33
-      '@vercel/build-utils': 5.8.3
-      '@vercel/node-bridge': 3.1.8
-      '@vercel/static-config': 2.0.11
+      '@vercel/build-utils': 6.2.2
+      '@vercel/node-bridge': 3.1.11
+      '@vercel/static-config': 2.0.12
       edge-runtime: 2.0.0
       esbuild: 0.14.47
       exit-hook: 2.2.1
@@ -137,8 +137,8 @@ packages:
       - encoding
     dev: true
 
-  /@vercel/static-config/2.0.11:
-    resolution: {integrity: sha512-dw6CAJ7U2AcQpjZV9YfOyz2wTseSFdkT3qivBg2GjHtVyd5wdY7vkQ9seLKEckYhFx3CjQ29IhzhDND9F5oINw==}
+  /@vercel/static-config/2.0.12:
+    resolution: {integrity: sha512-mkTS3t6RV6Fu7G21LpegEuuHl9rwfyNkoBvsNV5BBP0h7/3OzHwHip+t20oKWk3IrWu5ic0nbLNhyARdkeA1hQ==}
     dependencies:
       ajv: 8.6.3
       json-schema-to-ts: 1.6.4
@@ -150,8 +150,8 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: true
 
-  /acorn/8.8.1:
-    resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
+  /acorn/8.8.2:
+    resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
@@ -173,8 +173,8 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: false
 
-  /axios/1.2.2:
-    resolution: {integrity: sha512-bz/J4gS2S3I7mpN/YZfGFTqhXTYzRho8Ay38w2otuuDR322KzFIWm/4W2K6gIwvWaws5n+mnb7D1lN9uD+QH6Q==}
+  /axios/1.3.3:
+    resolution: {integrity: sha512-eYq77dYIFS77AQlhzEL937yUBSepBfPIe8FcgEDN35vMNZKMrs81pgnyrQpwfy4NF4b4XWX1Zgx7yX+25w8QJA==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
@@ -213,7 +213,7 @@ packages:
     dev: false
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /convert-hrtime/3.0.0:
@@ -642,8 +642,8 @@ packages:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
     dev: false
 
-  /punycode/2.2.0:
-    resolution: {integrity: sha512-LN6QV1IJ9ZhxWTNdktaPClrNfp8xdSAYS0Zk2ddX7XsXZAxckMHPCBcHRo0cTcEIgYPRiGEkmji3Idkh2yFtYw==}
+  /punycode/2.3.0:
+    resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
     dev: true
 
@@ -712,7 +712,7 @@ packages:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
       '@types/node': 14.18.33
-      acorn: 8.8.1
+      acorn: 8.8.2
       acorn-walk: 8.2.0
       arg: 4.1.3
       create-require: 1.1.1
@@ -736,7 +736,7 @@ packages:
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
-      punycode: 2.2.0
+      punycode: 2.3.0
     dev: true
 
   /v8-compile-cache-lib/3.0.1:
