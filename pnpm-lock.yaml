@@ -2,17 +2,17 @@ lockfileVersion: 5.4
 
 specifiers:
   '@tsconfig/node18': ^1.0.1
-  '@types/node': ^18.13.0
-  '@vercel/node': ^2.9.3
-  axios: ^1.3.3
+  '@types/node': ^18.14.4
+  '@vercel/node': ^2.9.10
+  axios: ^1.3.4
 
 dependencies:
-  axios: 1.3.3
+  axios: 1.3.4
 
 devDependencies:
   '@tsconfig/node18': 1.0.1
-  '@types/node': 18.13.0
-  '@vercel/node': 2.9.3
+  '@types/node': 18.14.4
+  '@vercel/node': 2.9.10
 
 packages:
 
@@ -111,26 +111,26 @@ packages:
     resolution: {integrity: sha512-qelS/Ra6sacc4loe/3MSjXNL1dNQ/GjxNHVzuChwMfmk7HuycRLVQN2qNY3XahK+fZc5E2szqQSKUyAF0E+2bg==}
     dev: true
 
-  /@types/node/18.13.0:
-    resolution: {integrity: sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg==}
+  /@types/node/18.14.4:
+    resolution: {integrity: sha512-VhCw7I7qO2X49+jaKcAUwi3rR+hbxT5VcYF493+Z5kMLI0DL568b7JI4IDJaxWFH0D/xwmGJNoXisyX+w7GH/g==}
     dev: true
 
-  /@vercel/build-utils/6.2.2:
-    resolution: {integrity: sha512-xpexr6GQ8NPo1NHrA1VBpVEapmM+vfkViVtGRjvSYMVrIXZumSCYg8ZJiixn43RwNnGUnPPMD33FZXuGiQXU6g==}
+  /@vercel/build-utils/6.3.2:
+    resolution: {integrity: sha512-wUYa8eUyTg1jPGRCrjpIxJm1r6hQE7ccbECWzDCAikuWG4iadS2zWrF7bsAcuUj7fTMf8sNFhmsknTJgyN3B3g==}
     dev: true
 
-  /@vercel/node-bridge/3.1.11:
-    resolution: {integrity: sha512-LGbj+kPGgRnIlKo3949z01mLbHVi4BnRE7V5R6+J4E3f7xpQ12I9Wek10V7ivLB+LyS1+ATdjasdXAF4HOhqQw==}
+  /@vercel/node-bridge/3.1.14:
+    resolution: {integrity: sha512-TAbo0rwBenmWywcEup+5lZgr6ILPPq55P33JRX+oJJuTxYib0NqVj47gEvLTxaj3MoJFgp0iDlC9A0uAf4ykxQ==}
     dev: true
 
-  /@vercel/node/2.9.3:
-    resolution: {integrity: sha512-BexOx3i1ZM3wizWgS/hlqWxA5+S79ZLfvgnsT6MKv7s9okYsSDpi4w5hMpv8/TTvrxGA6VlbquuHo5irm6NJcQ==}
+  /@vercel/node/2.9.10:
+    resolution: {integrity: sha512-rpl0dkJVQpPgIPvAG2hIuxwIIUoxRFqGwMVqqsp6r9sr2Y03q+t2UtPSGOyBRpE+0JdYV2GzcRcgiPQi3Udi7w==}
     dependencies:
       '@edge-runtime/vm': 2.0.0
       '@types/node': 14.18.33
-      '@vercel/build-utils': 6.2.2
-      '@vercel/node-bridge': 3.1.11
-      '@vercel/static-config': 2.0.12
+      '@vercel/build-utils': 6.3.2
+      '@vercel/node-bridge': 3.1.14
+      '@vercel/static-config': 2.0.13
       edge-runtime: 2.0.0
       esbuild: 0.14.47
       exit-hook: 2.2.1
@@ -143,8 +143,8 @@ packages:
       - encoding
     dev: true
 
-  /@vercel/static-config/2.0.12:
-    resolution: {integrity: sha512-mkTS3t6RV6Fu7G21LpegEuuHl9rwfyNkoBvsNV5BBP0h7/3OzHwHip+t20oKWk3IrWu5ic0nbLNhyARdkeA1hQ==}
+  /@vercel/static-config/2.0.13:
+    resolution: {integrity: sha512-09bVISGyhRMoL6gQTfM7n89SeUmyOlIzVMo2oNOj3thy4AIKGuN0SzEp0qNRw8d9j07rifp9JPD4rOuDRx4+eA==}
     dependencies:
       ajv: 8.6.3
       json-schema-to-ts: 1.6.4
@@ -179,8 +179,8 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: false
 
-  /axios/1.3.3:
-    resolution: {integrity: sha512-eYq77dYIFS77AQlhzEL937yUBSepBfPIe8FcgEDN35vMNZKMrs81pgnyrQpwfy4NF4b4XWX1Zgx7yX+25w8QJA==}
+  /axios/1.3.4:
+    resolution: {integrity: sha512-toYm+Bsyl6VC5wSkfkbbNB6ROv7KY93PEBBL6xyDczaIHasAiv4wPqQ/c4RjoQzipxRD2W5g21cOqQulZ7rHwQ==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
