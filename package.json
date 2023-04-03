@@ -13,8 +13,8 @@
 	},
 	"devDependencies": {
 		"@tsconfig/node18": "^1.0.1",
-		"@types/node": "^18.14.4",
-		"@vercel/node": "^2.9.10"
+		"@types/node": "^18.15.11",
+		"@vercel/node": "^2.10.2"
 	},
 	"engines": {
 		"node": "18.x"
