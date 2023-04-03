@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import {dynamicSleep, handleError} from '../src/utils'
 
-const webhooks = async (request: VercelRequest, response: VercelResponse) => {
+export default async function webhooks(request: VercelRequest, response: VercelResponse): Promise<void> {
 	if (request.method !== 'POST') {
 		response.status(405).send('this route supports POST only!')
 		return
@@ -73,5 +73,3 @@ const webhooks = async (request: VercelRequest, response: VercelResponse) => {
 		}
 	}
 }
-
-export default webhooks
