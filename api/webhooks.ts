@@ -1,4 +1,5 @@
 import type {VercelRequest, VercelResponse} from '@vercel/node'
+import type {AxiosError} from 'axios'
 import axios from 'axios'
 
 import {dynamicSleep, handleError} from '../src/utils'
@@ -9,7 +10,7 @@ export default async function webhooks(request: VercelRequest, response: VercelR
 		return
 	}
 
-	const {id, token, wait, thread_id} = request.query
+	const {apiVersion, id, token, wait, thread_id} = request.query
 	const parameters = new URLSearchParams()
 	if (wait) {
 		parameters.append('wait', String(wait))
@@ -19,7 +20,7 @@ export default async function webhooks(request: VercelRequest, response: VercelR
 		parameters.append('thread_id', String(thread_id))
 	}
 
-	const url = new URL(`https://discord.com/api/webhooks/${id}/${token}?${parameters}`).toString()
+	const url = new URL(`https://discord.com/api/${apiVersion || 'v10'}/webhooks/${id}/${token}?${parameters}`).toString()
 
 	const contentType = request.headers['content-type']!.split(';')[0]
 
@@ -35,7 +36,7 @@ export default async function webhooks(request: VercelRequest, response: VercelR
 					.then(res => {
 						response.status(res.status).send(res.data)
 					})
-					.catch(error => {
+					.catch((error: AxiosError) => {
 						handleError(error, response)
 					})
 			} catch (error: any) {
@@ -61,7 +62,7 @@ export default async function webhooks(request: VercelRequest, response: VercelR
 				.then(res => {
 					response.status(res.status).send(res.data)
 				})
-				.catch(error => {
+				.catch((error: AxiosError) => {
 					handleError(error, response)
 				})
 			break

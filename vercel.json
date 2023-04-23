@@ -8,6 +8,10 @@
 		{
 			"source": "/api/webhooks/:id/:token",
 			"destination": "/api/webhooks"
+		},
+		{
+			"source": "/api/:apiVersion/webhooks/:id/:token",
+			"destination": "/api/webhooks"
 		}
 	],
 	"github": {
