@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,17 +9,72 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css">
 </head>
+
 <body>
 	<h1>discord-ifttt, self-hosted edition</h1>
 
 	<details open>
 		<summary>How?</summary>
 		<p>
-			Replace <code>discord.com</code> with <code id="hostname">[project-name].vercel.app</code> (copy it from address bar) in webhook url field and you're ready to go.
+			Replace <code>discord.com</code> with <code id="hostname">[project-name].vercel.app</code> (copy it from address
+			bar) in webhook url field and you're ready to go.
 		</p>
 	</details>
+
+	<details open>
+		<summary>How to update?</summary>
+		<p>
+			If your instance is fork-based (on the GitHub page it should say <i>forked from Birdie0/discord-ifttt</i>),
+			click <b>Sync fork</b> below <b>Code</b> button, then click <b>Update branch</b> button.
+		</p>
+
+		<p>
+			If project was cloned without fork reference (in case you used <b>Deploy</b> button) there's 2 ways to solve this:
+
+		<ul>
+			<li>
+				Clone project locally or use GitHub Codespaces and push latest changes to it from main repository:
+
+				<ol>
+					<li>Open your fork on <a href="https://github.com/" rel="noopener noreferrer">GitHub</a></li>
+					<li>Click <b>Code</b>, then <b>Codespaces</b> and <b>Create Codespace on master</b></li>
+					<li>After it finishes loading, open <b>Terminal</b> by pressing <kbd>Ctrl + ~</kbd> (<kbd>~</kbd> is between
+						<kbd>Esc</kbd> and <kbd>Tab</kbd>)</li>
+					<li>Paste the commands there and press <kbd>Enter</kbd>, you can copy whole block and paste it in terminal
+						with right click:</li>
+				</ol>
+
+				<pre>
+					<code>
+						git remote add upstream https://github.com/Birdie0/discord-ifttt.git
+						git fetch upstream
+						git rebase upstream/master
+						git push origin master
+					</code>
+				</pre>
+			</li>
+
+			<li>
+				Delete repository and fork it.
+
+				<ol>
+					<li>Go to <b>Settings</b>, scroll to the bottom of the page, click <b>Delete this repository</b> button</li>
+					<li>After repository has been deleted, go to <a href="https://github.com/Birdie0/discord-ifttt"
+							rel="noopener noreferrer">Birdie0/discord-ifttt</a> and click <b>Fork</b> button at the top</li>
+					<li>Go to the <a href="https://vercel.com/dashboard">Vercel Dashboard</a>, click on project, then
+						<b>Settings</b>, in list on the left click <b>Git</b>, under <b>Connected Git Repository</b> it should say
+						that project is not linked, click <b>Reconnect</b> and select from the list newly forked repository</li>
+					<li>After that you should be able to update the project using the very first method since it's now fork-based
+					</li>
+				</ol>
+			</li>
+		</ul>
+		</p>
+	</details>
+
 	<script>
 		document.querySelector('#hostname').textContent = window.location.hostname
 	</script>
 </body>
+
 </html>
