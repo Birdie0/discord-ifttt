@@ -19,7 +19,9 @@
       If you gonna self-host the instance, feel free to share link to it with friends, so they don't have to re-host it.<br>
       Don't worry about hitting the limit, you have to receive really big load of requests to hit it, like it was in my case.<br><br>
 
-      <a href="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FBirdie0%2Fdiscord-ifttt&project-name=discord-ifttt&repository-name=discord-ifttt-selfhosted"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a><br><br>
+      <a href="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FBirdie0%2Fdiscord-ifttt&project-name=discord-ifttt&repository-name=discord-ifttt-selfhosted">
+				<img src="https://vercel.com/button" alt="Deploy with Vercel"/>
+			</a><br><br>
 
       Selfhostable version of the service can be found <a href="https://github.com/Birdie0/discord-ifttt">here</a>!<br><br>
 
@@ -29,16 +31,101 @@
 
   <details open>
     <summary>How to self-host?</summary>
-    <p>
       <ol>
         <li>Create GitHub/GitLab/Bitbucket account if you don't have one.</li>
         <li><a href="https://vercel.com/signup" target="_blank" rel="noopener noreferrer">Login</a> on Vercel with it.</li>
-        <li>Go <a href="https://vercel.com/new/clone-flow?s=https%3A%2F%2Fgithub.com%2FBirdie0%2Fdiscord-ifttt" target="_blank" rel="noopener noreferrer">there</a></li>
-        <li>Under <strong>Create Git Repository</strong> choose same service as on step 1</li>
-        <li>Enter repository name, it will become <code>https://[repo-name].vercel.app/</code> after the deploy</li>
-        <li>Click Create, when it finish you will be redirected.</li>
-        <li>Done!</li>
-      </ol>
+			</ol>
+
+      <ul>
+        <li>
+          If you want to simplify future updates, follow the next steps:
+
+          <ol>
+            <li>Go to <a href="https://github.com/Birdie0/discord-ifttt" target="_blank" rel="noopener noreferrer">Birdie0/discord-ifttt</a> and click <b>Fork</b></li>
+            <li>Go the <a href="https://vercel.com/new" target="_blank" rel="noopener noreferrer">Vercel - New Project</a> page, select Git provider and newly forked repo from the list</li>
+            <li>Press <b>Import</b> and <b>Deploy</b> on the next page</li>
+            <li>Done!</li>
+          </ol>
+        </li>
+
+        <li>
+          Otherwise follow these:
+
+          <ol>
+            <li>Create GitHub/GitLab/Bitbucket account if you don't have one.</li>
+            <li><a href="https://vercel.com/signup" target="_blank" rel="noopener noreferrer">Login</a> on Vercel with it.</li>
+            <li>Go <a href="https://vercel.com/new/clone-flow?s=https%3A%2F%2Fgithub.com%2FBirdie0%2Fdiscord-ifttt" target="_blank" rel="noopener noreferrer">there</a></li>
+            <li>Under <strong>Create Git Repository</strong> choose same service as on step 1</li>
+            <li>Enter repository name, it will become <code>https://[repo-name].vercel.app/</code> after the deploy</li>
+            <li>Click Create, when it finish you will be redirected.</li>
+            <li>Done!</li>
+          </ol>
+        </li>
+      </ul>
+  </details>
+
+  <details open>
+    <summary>How to update?</summary>
+    <p>
+      If your instance is fork-based (on the GitHub page it should say <i>forked from Birdie0/discord-ifttt</i>),
+			click <b>Sync fork</b> below <b>Code</b> button, then click <b>Update branch</b> button.
+    </p>
+
+    <p>
+      If project was cloned without fork reference (in case you used <b>Deploy</b> button) there's 2 ways to solve this:
+
+    	<ol>
+				<li>
+					Clone project locally or use GitHub Codespaces and push latest changes to it from main repository:
+
+					<ol>
+						<li>
+							Open your fork on <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+						</li>
+						<li>
+							Click <b>Code</b>, then <b>Codespaces</b> and <b>Create Codespace on master</b>
+						</li>
+						<li>
+							After it finishes loading, open <b>Terminal</b> by pressing <kbd>Ctrl + ~</kbd>
+							(<kbd>~</kbd> is between <kbd>Esc</kbd> and <kbd>Tab</kbd>)
+						</li>
+						<li>Paste the commands there and press <kbd>Enter</kbd>,
+							you can copy whole block and paste it in terminal with right click:
+						</li>
+					</ol>
+
+					<pre>
+						<code>
+git remote add upstream https://github.com/Birdie0/discord-ifttt.git
+git fetch upstream
+git rebase upstream/master
+git push origin master
+						</code>
+					</pre>
+				</li>
+
+				<li>
+					Delete repository and fork it.
+
+					<ol>
+						<li>
+							Go to <b>Settings</b>, scroll to the bottom of the page, click <b>Delete this repository</b> button
+						</li>
+						<li>
+							After repository has been deleted, go to <a href="https://github.com/Birdie0/discord-ifttt" target="_blank" rel="noopener noreferrer">Birdie0/discord-ifttt</a>
+							and click <b>Fork</b> button at the top
+						</li>
+						<li>
+							Go to the <a href="https://vercel.com/dashboard" target="_blank" rel="noopener noreferrer">Vercel Dashboard</a>, click on project, then <b>Settings</b>,
+							in list on the left click <b>Git</b>, under <b>Connected Git Repository</b> it should say that project is not linked,
+							click <b>Reconnect</b> and select from the list newly forked repository
+						</li>
+						<li>
+							After that you should be able to update the project using the very first method since it's now fork-based
+						</li>
+					</ol>
+				</li>
+			</ol>
     </p>
   </details>
 
