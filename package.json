@@ -9,15 +9,15 @@
 		"lint:check": "tsc --noEmit"
 	},
 	"dependencies": {
-		"axios": "^1.6.5"
+		"axios": "^1.6.8"
 	},
 	"devDependencies": {
-		"@tsconfig/node18": "^18.2.2",
-		"@types/node": "^18.19.5",
-		"@vercel/node": "^3.0.15",
-		"typescript": "~5.3.3"
+		"@tsconfig/node20": "^20.1.4",
+		"@types/node": "^20.12.3",
+		"@vercel/node": "^3.0.25",
+		"typescript": "~5.4.3"
 	},
 	"engines": {
-		"node": "18.x"
+		"node": "20.x"
 	}
 }
