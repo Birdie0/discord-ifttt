@@ -46,7 +46,7 @@ export default async function webhooks(
 					.catch((error: AxiosError) => {
 						handleError(error, response)
 					})
-			} catch (error: unknown) {
+			} catch (error) {
 				response.status(400).send({
 					error: error instanceof Error ? error.message : 'Unknown error',
 				})
