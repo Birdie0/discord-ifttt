@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"lint": "pnpm biome check .",
-		"lint:fix": "pnpm biome check . --apply",
+		"lint": "biome check .",
+		"lint:fix": "biome check . --apply",
 		"lint:check": "tsc --noEmit"
 	},
 	"dependencies": {
