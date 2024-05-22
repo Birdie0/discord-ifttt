@@ -4,18 +4,18 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"lint": "xo",
-		"lint:fix": "xo --fix",
+		"lint": "pnpm biome check .",
+		"lint:fix": "pnpm biome check . --apply",
 		"lint:check": "tsc --noEmit"
 	},
 	"dependencies": {
-		"axios": "^1.6.8"
+		"axios": "^1.7.2"
 	},
 	"devDependencies": {
-		"@tsconfig/node20": "^20.1.4",
-		"@types/node": "^20.12.3",
-		"@vercel/node": "^3.0.25",
-		"typescript": "~5.4.3"
+		"@biomejs/biome": "^1.7.3",
+		"@total-typescript/tsconfig": "^1.0.4",
+		"@vercel/node": "^3.1.5",
+		"typescript": "~5.4.5"
 	},
 	"engines": {
 		"node": "20.x"

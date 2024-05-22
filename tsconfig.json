@@ -1,6 +1,3 @@
 {
-	"extends": "@tsconfig/node20/tsconfig.json",
-	"compilerOptions": {
-		"isolatedModules": true
-	}
+	"extends": "@total-typescript/tsconfig/bundler/no-dom/app"
 }
