@@ -4,20 +4,20 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"lint": "biome check .",
-		"lint:fix": "biome check . --apply",
+		"lint": "biome check",
+		"lint:fix": "biome check --write",
 		"lint:check": "tsc --noEmit"
 	},
 	"dependencies": {
-		"axios": "^1.7.2"
+		"axios": "^1.7.7"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.7.3",
+		"@biomejs/biome": "^1.9.4",
 		"@total-typescript/tsconfig": "^1.0.4",
-		"@vercel/node": "^3.1.5",
-		"typescript": "~5.4.5"
+		"@vercel/node": "^3.2.26",
+		"typescript": "~5.7.2"
 	},
 	"engines": {
-		"node": "20.x"
+		"node": "22.x"
 	}
 }
