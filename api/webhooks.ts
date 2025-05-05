@@ -13,20 +13,12 @@ export default async function webhooks(
 		return
 	}
 
-	const { apiVersion, id, token, wait, thread_id } = request.query
-	const parameters = new URLSearchParams()
-	if (wait) {
-		parameters.append('wait', String(wait))
-	}
-
-	if (thread_id) {
-		parameters.append('thread_id', String(thread_id))
-	}
+	const { apiVersion, id, token, ...queryParams } = request.query
+	const parameters = new URLSearchParams(queryParams)
+	const version = apiVersion ?? 'v10'
 
 	const url = new URL(
-		`https://discord.com/api/${
-			apiVersion || 'v10'
-		}/webhooks/${id}/${token}?${parameters}`,
+		`https://discord.com/api/${version}/webhooks/${id}/${token}?${parameters}`,
 	).toString()
 
 	const contentType = request.headers['content-type']?.split(';')[0]
